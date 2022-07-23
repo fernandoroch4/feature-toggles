@@ -2,10 +2,20 @@ from time import sleep
 
 from main import FeatureToggles
 
-feat = FeatureToggles('/fx8/mfe', ['fx8_mfe_cadastrar_mfe'])
+feature_toggles = FeatureToggles('/fx8/mfe', ['fx8_mfe_cadastrar_mfe'])
+feature_toggles2 = FeatureToggles('/fx8/mfe2', ['fx8_mfe2_deletar_mfe'])
 
-print('#'*10, feat.has_access('cadastrar_mfe'))
-sleep(10)
-print('#'*10, feat.has_access('cadastrar_mfe'))
+feature_toggles.is_authorize('cadastrar_mfe')
+print('\n'*1)
+feature_toggles2.is_authorize('cadastrar_mfe')
+print('\n'*1)
 sleep(5)
-print('#'*10, feat.has_access('cadastrar_mfe'))
+feature_toggles.is_authorize('cadastrar_mfe')
+print('\n'*1)
+feature_toggles2.is_authorize('cadastrar_mfe')
+print('\n'*1)
+sleep(5)
+feature_toggles.is_authorize('cadastrar_mfe')
+print('\n'*1)
+feature_toggles2.is_authorize('cadastrar_mfe')
+print('\n'*1)
