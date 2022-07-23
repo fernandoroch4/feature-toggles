@@ -67,7 +67,7 @@ class FeatureToggles:
 
         if datetime.now() >= self.expires_at:
 
-            self.log.info(f'cache: miss for namespace "{self.namespace}"')
+            self.log.info(f'cache: expired for namespace "{self.namespace}"')
             self.log.info(f'cache: clearning for namespace "{self.namespace}"')
 
             return True
